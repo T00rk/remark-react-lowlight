@@ -12,7 +12,7 @@ export default (languageDefinitions) => {
   const Code = ({ className = '', children }) => {
     const language = className.split('-')[1] || '';
     const value = children[0] || '';
-    const props = { value, inline: true };
+    const props = { value, inline: false };
 
     if (Object.keys(languageDefinitions).indexOf(language) > -1) {
       // Include the language only if it was previously registered
